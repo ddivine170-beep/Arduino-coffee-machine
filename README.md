@@ -6,7 +6,7 @@ A menu-driven coffee machine prototype built on an Arduino Uno (ATmega328P) and 
 The machine shows a menu on an LCD and lets the user choose a drink with push buttons:
 
 - **Button 0: Maxi coffee.** The LCD shows "water heater turns on" and the temperature sensor is read continuously. When the temperature is at least 20 °C and below 30 °C, the buzzer beeps and the DC motor pumps water for 20 seconds, with a live countdown on the LCD. Then it shows "coffee ready".
-- **Button 1: Espresso.** The same sequence, with the DC motor pumping water for 10 seconds.
+- **Button 1: Espresso.** The same sequence, with the DC motor running for 10 seconds.
 - **Button 3: Emergency stop.** The LCD shows "emergency stop", the buzzer beeps 10 times, and the machine returns to the main menu. It works at every stage: while waiting for the right temperature and during the DC motor countdown.
 
 The water heater and DC motor are represented by messages and a countdown on the LCD, not by physical parts.
@@ -22,29 +22,40 @@ The water heater and DC motor are represented by messages and a countdown on the
 1. At start-up the LCD and temperature sensor are initialised and a welcome message is shown for 3 seconds.
 2. The program waits for a button press and uses a Switch block to choose the Maxi, Espresso or Emergency path.
 3. In the heating stage, a loop reads the temperature until it is at least 20 °C and below 30 °C, or until the emergency button is pressed.
-4. A countdown on the LCD shows the remaining time while the DC motor pumps water. The emergency button is checked every second.
+4. A countdown on the LCD shows the remaining time while the DC motor runs. The emergency button is checked every second.
 5. Delays slow the program down so messages can be read on the LCD.
 6. After each drink or emergency stop, the program returns to the main menu.
 
 ## Demo on Arduino hardware
-[paste your YouTube link here, or use: [Watch the demo](demo_arduino.mp4)]
+PASTE YOUR VIDEO LINK HERE
 
 ## Simulation (Flowcode)
-Menu screen:
+Screenshots from the Flowcode simulator, showing the LCD, temperature sensor, switch board and buzzer.
 
-![Menu](images/sim_1_menu.png)
+**Start-up and menu**
 
-Heating stage (reading the temperature):
+![Welcome message](images/sim_01_welcome.png)
+![Menu](images/sim_02_menu.png)
 
-![Heating](images/sim_2_maxi_heating.png)
+**Emergency stop**
 
-DC motor pumping water, with countdown:
+![Emergency stop](images/sim_03_emergency_stop.png)
 
-![Countdown](images/sim_3_motor_countdown.png)
+**Maxi coffee (button 0)**
 
-Emergency stop:
+![Maxi selected](images/sim_04_maxi_selected.png)
+![Correct temperature reached](images/sim_05_maxi_correct_temp.png)
+![DC motor pumping water for 20 seconds](images/sim_06_maxi_motor_pumping.png)
+![Water heater and DC motor off](images/sim_07_maxi_heater_motor_off.png)
+![Coffee ready](images/sim_08_maxi_coffee_ready.png)
 
-![Emergency stop](images/sim_4_emergency.png)
+**Espresso (button 1)**
+
+![Espresso selected](images/sim_09_espresso_selected.png)
+![Correct temperature reached](images/sim_10_espresso_correct_temp.png)
+![DC motor countdown](images/sim_11_espresso_motor_countdown.png)
+![Water heater and DC motor off](images/sim_12_espresso_heater_motor_off.png)
+![Coffee ready](images/sim_13_espresso_coffee_ready.png)
 
 ## Flowchart
 Overview of the whole program:
@@ -79,10 +90,11 @@ Overview of the whole program:
 ## Challenges I solved
 1. **Stuck in the temperature loop.** At first, if the temperature was never in the correct range, the program stayed in the temperature-reading loop with no way out. I fixed this by reading the switch board inside that loop and exiting if button 3 is pressed. The machine now goes straight to the emergency stop and back to the main menu.
 2. **Emergency button ignored during the countdown.** While reviewing my flowchart, I noticed the countdown loops read the switch board but never stored the result in `switch_data`, so button 3 was not detected during the DC motor countdown. I changed the block to `switch_data = Switch_BL0145::ReadAll()` in both the Maxi and Espresso countdowns, and tested that the emergency stop now works at every stage.
+3. **Countdown text overwritten on the LCD.** The countdown number was printed at the start of the "time left" line, so it overwrote the first letters (it showed "15 e left"). I moved the number to its own line with `Cursor(0, 2)`, so the LCD now shows the number above "time left" in both the Maxi and Espresso countdowns.
 
 ## What I would improve
 - Use a real heater and DC motor, with a higher target temperature for hot drinks.
-- Add LEDs to show the machine status.
+- Add LEDs or a display bar to show the machine status and progress.
 
 ## Files
 - `coffee_machine.fcfx`: Flowcode project file
