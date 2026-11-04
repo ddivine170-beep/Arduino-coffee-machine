@@ -1,0 +1,589 @@
+<root>
+<document scada='0' schema='103' license='1,FREE_VERSION,DF7JCQ' title='' description='' fcversion='655618' target='ARD.ATMEGA.Arduino Uno R3 PDIP' >
+	<config data='' clkspd='16000000' simspd='0' usewdt='0' constif='0' commport='3' Use3V3='0' />
+	<plugins >
+		<dll_models enabled='1' />
+	</plugins>
+	<supplement use='0' head='' body='' />
+	<debug >
+		<watch expr='switch_data' />
+		<watch expr='desired_temp' />
+		<watch expr='dc_motor' />
+	</debug>
+	<traces />
+	<ghost >
+		<FK2 >
+			<data name='FK2D0' port='4294967295' pin='4294967295' />
+			<data name='FK2D1' port='4294967295' pin='4294967295' />
+			<data name='FK2D2' port='4294967295' pin='4294967295' />
+			<data name='FK2D3' port='4294967295' pin='4294967295' />
+			<data name='FK2D4' port='4294967295' pin='4294967295' />
+			<data name='FK2D5' port='4294967295' pin='4294967295' />
+			<data name='FK2D6' port='4294967295' pin='4294967295' />
+			<data name='FK2D7' port='4294967295' pin='4294967295' />
+			<data name='FK2D8' port='4294967295' pin='4294967295' />
+			<data name='FK2D9' port='4294967295' pin='4294967295' />
+			<data name='FK2D10' port='4294967295' pin='4294967295' />
+			<data name='FK2D11' port='4294967295' pin='4294967295' />
+			<data name='FK2D12' port='4294967295' pin='4294967295' />
+			<data name='FK2D13' port='4294967295' pin='4294967295' />
+			<data name='FK2D14' port='4294967295' pin='4294967295' />
+			<data name='FK2D15' port='4294967295' pin='4294967295' />
+			<data name='FK2A0' port='4294967295' pin='4294967295' />
+			<data name='FK2A1' port='4294967295' pin='4294967295' />
+			<data name='FK2A2' port='4294967295' pin='4294967295' />
+			<data name='FK2A3' port='4294967295' pin='4294967295' />
+			<data name='FK2A4' port='4294967295' pin='4294967295' />
+			<data name='FK2A5' port='4294967295' pin='4294967295' />
+		</FK2>
+		<ICD >
+			<data name='AnalogPrescaleValue' value='19' />
+			<data name='DigitalSampleRate' value='100000' />
+			<data name='BreakpointCount' value='8' />
+			<data name='CallStackDepthCount' value='8' />
+			<data name='ClockPort' value='3' />
+			<data name='ClockPin' value='1' />
+			<data name='DataPort' value='3' />
+			<data name='DataPin' value='0' />
+			<data name='UseDefaultPins' value='1' />
+			<data name='WrapEnabled' value='1' />
+			<data name='CommsDelayOverridden' value='0' />
+			<data name='CommsDelay' value='11' />
+			<data name='CalculatedCommsDelay' value='11' />
+			<data name='AnalogEB2PrescaleValue' value='2' />
+			<data name='DigitalEB2SampleRate' value='100000' />
+		</ICD>
+		<pins >
+			<digital A='0' B='0' C='0' D='0' E='0' F='0' G='0' H='0' I='0' J='0' K='0' L='0' M='0' N='0' O='0' P='0' Q='0' R='0' S='0' T='0' U='0' V='0' W='0' X='0' Y='0' Z='0' />
+			<analog A='0' B='0' C='0' D='0' E='0' F='0' G='0' H='0' I='0' J='0' K='0' L='0' M='0' N='0' O='0' P='0' Q='0' R='0' S='0' T='0' U='0' V='0' W='0' X='0' Y='0' Z='0' />
+		</pins>
+	</ghost>
+	<components >
+		<settings autoimg='0' center='1' unitscale='0' fixedscale='0' fixedx='25' fixedy='25' fixedz='25' headcode='0' />
+		<definition guid='c142032d-bc7d-4fcd-84f1-c246c7f611bb' vstate='40' vmin='0' vmaj='1' srcleaf='' visiblename='' description='' category='' category2='' category3='' bIs2dOnly='0' bIs3dOnly='0' catenable='1' author='' manuname='' manucode='' sysinfo='0' keywords='' dynamic='1' scadaCompatible='0' embeddedCompatible='1' showmacros='1' iconpath='' />
+		<component class_type='root' codename='ComponentRoot' panelId='-1' x='0' y='0' z='0' xsz='1' ysz='1' zsz='1' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='0' poslock='0' comp2dType='0' >
+			<resources />
+			<properties />
+			<values />
+			<events />
+			<apis />
+			<variables >
+				<variable public='0' >
+					<def class_type='variable' name='false' type='b1' description='' isconst='1' isHidden='0' isinit='1' usrinit='0' setinit='0' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='dc_motor' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='switch_data' type='u8' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='true' type='b1' description='' isconst='1' isHidden='0' isinit='1' usrinit='1' setinit='1' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='desired_temp' type='s16' description='' isconst='0' isHidden='0' isinit='0' usrinit='0' setinit='' />
+				</variable>
+			</variables>
+			<macros >
+				<macro >
+					<flowline name='Main' description='' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<command class_type='comment' title='' comment='Before everything i must initialise my sensors or outputs for example LCD and my Temperature sensor' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Start' />
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Grove_Humidity_SHT31' macro='Initialise' />
+						<command class_type='comment' title='' comment='I used cursor command to tell LCD write in (x,y) directions that i told you
+
+I also used this command lots of time for the entire program' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Cursor' >
+							<argument exp='0' />
+							<argument exp='0' />
+						</command>
+						<command class_type='comment' title='' comment='Printstring command is for writing the words for example when i want to write something (words) on my LCD i can use this command' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+							<argument exp='&quot;welcome to your&quot;' />
+						</command>
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Cursor' >
+							<argument exp='0' />
+							<argument exp='1' />
+						</command>
+						<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+							<argument exp='&quot;coffee machine&quot;' />
+						</command>
+						<command class_type='comment' title='' comment='I used lots of delays in entire program because the microcontroller is so fast for indicating I need to make the microcontroller slow' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+						<command class_type='delay' title='Delay' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='3' type='2' />
+						<command class_type='comment' title='' comment='I used one main loop because the coffee macchine will be turned on until emergency button pressed or the owner unplugs the system' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+						<command class_type='loop' title='Loop' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' type='0' exp='1' >
+							<flowline >
+								<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Clear' />
+								<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Cursor' >
+									<argument exp='0' />
+									<argument exp='0' />
+								</command>
+								<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+									<argument exp='&quot;BUTTON 0=MAXI&quot;' />
+								</command>
+								<command class_type='comment' title='' comment='I used button 0 for Maxi from switch board which the value is 1' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+								<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Cursor' >
+									<argument exp='0' />
+									<argument exp='1' />
+								</command>
+								<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+									<argument exp='&quot;BUTTON 1=Espresso&quot;' />
+								</command>
+								<command class_type='comment' title='' comment='I used button 1 for Espresso from switch board which the value is 2
+' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+								<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Cursor' >
+									<argument exp='0' />
+									<argument exp='2' />
+								</command>
+								<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+									<argument exp='&quot;BUTTON 3=EMERGRNCY&quot;' />
+								</command>
+								<command class_type='delay' title='Delay' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='2' type='2' />
+								<command class_type='comment' title='' comment='I used button 3 for Emergency from switch board which the value is 8' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+								<command class_type='loop' title='Loop' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' type='1' exp='switch_data = 8 OR switch_data = 2 OR switch_data = 1' start='0' >
+									<flowline >
+										<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Switch_BL0145' macro='ReadAll' >
+											<return exp='switch_data' />
+										</command>
+									</flowline>
+								</command>
+								<command class_type='comment' title='' comment='I aslso used a switch box as a decision box because i can make three action path' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+								<command class_type='switch' title='Switch' textarea='36,25,36,25' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='switch_data' >
+									<case >
+										<flowline >
+											<command class_type='comment' title='' comment='As i said before i used a switch box, If the switch 3 pressed the value for the switch data will be 8 which means use this path' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+											<command class_type='comment' title='' comment='If emergency button pressed
+ Then the machine will clead the LCD and write Emergency stop
+ The the buzzer will indicate that the emergency button pressed
+ I used 10s delay to actually show the owner what is the problem
+ After that the display will be clear and the program will reach the buttom of the main loop 
+and return back to the selection menu again
+ 
+' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+											<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Clear' />
+											<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Cursor' >
+												<argument exp='3' />
+												<argument exp='1' />
+											</command>
+											<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+												<argument exp='&quot;emergency stop&quot;' />
+											</command>
+											<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Buzzer1' macro='BuzzerBeep' >
+												<argument exp='100' />
+												<argument exp='100' />
+												<argument exp='10' />
+											</command>
+											<command class_type='delay' title='Delay' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='10' type='2' />
+											<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Clear' />
+										</flowline>
+									</case>
+									<case exp='1' >
+										<flowline >
+											<command class_type='comment' title='' comment='As i said before i used a switch box, If the switch 0 pressed the value for the switch data will be 1 which means use this path' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+											<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Clear' />
+											<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Cursor' >
+												<argument exp='0' />
+												<argument exp='0' />
+											</command>
+											<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+												<argument exp='&quot;MAXI IS SELECTED&quot;' />
+											</command>
+											<command class_type='delay' title='Delay' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='2' type='2' />
+											<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Cursor' >
+												<argument exp='0' />
+												<argument exp='3' />
+											</command>
+											<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+												<argument exp='&quot;WATERHEATER TURNSON&quot;' />
+											</command>
+											<command class_type='loop' title='Loop' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' type='1' exp='desired_temp &gt;= 20 &amp; desired_temp &lt; 30 OR switch_data = 8' start='0' >
+												<flowline >
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Grove_Humidity_SHT31' macro='GetTemperatureInt' >
+														<return exp='desired_temp' />
+													</command>
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Cursor' >
+														<argument exp='0' />
+														<argument exp='2' />
+													</command>
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintNumber' >
+														<argument exp='desired_temp' />
+													</command>
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Switch_BL0145' macro='ReadAll' >
+														<return exp='switch_data' />
+													</command>
+												</flowline>
+											</command>
+											<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='switch_data = 8' swap='1' >
+												<flowline >
+													<command class_type='delay' title='Delay' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='3' type='2' />
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Clear' />
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+														<argument exp='&quot;water heater is at correct temp.&quot;' />
+													</command>
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Buzzer1' macro='BuzzerBeep' >
+														<argument exp='100' />
+														<argument exp='100' />
+														<argument exp='2' />
+													</command>
+													<command class_type='delay' title='Delay' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='3' type='2' />
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Clear' />
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+														<argument exp='&quot;dc_motor turns pumps water for 20sec&quot;' />
+													</command>
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Buzzer1' macro='BuzzerBeep' >
+														<argument exp='100' />
+														<argument exp='100' />
+														<argument exp='2' />
+													</command>
+													<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+														<exp exp='dc_motor = 20' />
+													</command>
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='ClearLine' >
+														<argument exp='3' />
+													</command>
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+														<argument exp='&quot;time left&quot;' />
+													</command>
+													<command class_type='loop' title='Loop' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' type='1' exp='dc_motor = 0 OR switch_data = 8' start='0' >
+														<flowline >
+															<command class_type='delay' title='Delay' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='1' type='2' />
+															<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+																<exp exp='dc_motor = dc_motor - 1' />
+															</command>
+															<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Cursor' >
+																<argument exp='0' />
+																<argument exp='2' />
+															</command>
+															<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintNumber' >
+																<argument exp='dc_motor' />
+															</command>
+															<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+																<argument exp='&quot; &quot;' />
+															</command>
+															<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Switch_BL0145' macro='ReadAll' >
+																<return exp='switch_data' />
+															</command>
+														</flowline>
+													</command>
+													<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='switch_data = 8' swap='1' >
+														<flowline >
+															<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Clear' />
+															<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+																<argument exp='&quot;water heater and dc motor turns off&quot;' />
+															</command>
+															<command class_type='delay' title='Delay' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='2' type='2' />
+															<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Clear' />
+															<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+																<argument exp='&quot;coffee ready&quot;' />
+															</command>
+															<command class_type='delay' title='Delay' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='2' type='2' />
+															<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Clear' />
+															<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+																<argument exp='&quot;great choice&quot;' />
+															</command>
+															<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Buzzer1' macro='BuzzerBeep' >
+																<argument exp='100' />
+																<argument exp='100' />
+																<argument exp='2' />
+															</command>
+															<command class_type='delay' title='Delay' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='2' type='2' />
+														</flowline>
+														<flowline >
+															<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Clear' />
+															<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+																<argument exp='&quot;emergency stop&quot;' />
+															</command>
+															<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Buzzer1' macro='BuzzerBeep' >
+																<argument exp='100' />
+																<argument exp='100' />
+																<argument exp='10' />
+															</command>
+															<command class_type='delay' title='Delay' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='10' type='2' />
+															<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Clear' />
+														</flowline>
+													</command>
+												</flowline>
+												<flowline >
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Clear' />
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Cursor' >
+														<argument exp='3' />
+														<argument exp='1' />
+													</command>
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+														<argument exp='&quot;emergency stop&quot;' />
+													</command>
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Buzzer1' macro='BuzzerBeep' >
+														<argument exp='100' />
+														<argument exp='100' />
+														<argument exp='10' />
+													</command>
+													<command class_type='delay' title='Delay' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='10' type='2' />
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Clear' />
+												</flowline>
+											</command>
+										</flowline>
+									</case>
+									<case exp='2' >
+										<flowline >
+											<command class_type='comment' title='' comment='As i said before i used a switch box, If the switch 1 pressed the value for the switch data will be 2 which means use this path' textarea='12,0,12,0' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' />
+											<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Clear' />
+											<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Cursor' >
+												<argument exp='0' />
+												<argument exp='0' />
+											</command>
+											<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+												<argument exp='&quot;espresso selected&quot;' />
+											</command>
+											<command class_type='delay' title='Delay' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='2' type='2' />
+											<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Cursor' >
+												<argument exp='0' />
+												<argument exp='3' />
+											</command>
+											<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+												<argument exp='&quot;water heater turnson&quot;' />
+											</command>
+											<command class_type='loop' title='Loop' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' type='1' exp='desired_temp &gt;= 20 &amp; desired_temp &lt; 30 OR switch_data = 8' start='0' >
+												<flowline >
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Grove_Humidity_SHT31' macro='GetTemperatureInt' >
+														<return exp='desired_temp' />
+													</command>
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Cursor' >
+														<argument exp='0' />
+														<argument exp='2' />
+													</command>
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintNumber' >
+														<argument exp='desired_temp' />
+													</command>
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Switch_BL0145' macro='ReadAll' >
+														<return exp='switch_data' />
+													</command>
+												</flowline>
+											</command>
+											<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='switch_data = 8' swap='1' >
+												<flowline >
+													<command class_type='delay' title='Delay' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='3' type='2' />
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Clear' />
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+														<argument exp='&quot;water heater is at correct temp&quot;' />
+													</command>
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Buzzer1' macro='BuzzerBeep' >
+														<argument exp='100' />
+														<argument exp='100' />
+														<argument exp='2' />
+													</command>
+													<command class_type='delay' title='Delay' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='3' type='2' />
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Clear' />
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+														<argument exp='&quot;dc_motor turns on&quot;' />
+													</command>
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Buzzer1' macro='BuzzerBeep' >
+														<argument exp='100' />
+														<argument exp='100' />
+														<argument exp='2' />
+													</command>
+													<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+														<exp exp='dc_motor = 10' />
+													</command>
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='ClearLine' >
+														<argument exp='3' />
+													</command>
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+														<argument exp='&quot;time left&quot;' />
+													</command>
+												</flowline>
+												<flowline >
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Clear' />
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+														<argument exp='&quot;emergency stop&quot;' />
+													</command>
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Buzzer1' macro='BuzzerBeep' >
+														<argument exp='100' />
+														<argument exp='100' />
+														<argument exp='10' />
+													</command>
+													<command class_type='delay' title='Delay' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='10' type='2' />
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Clear' />
+												</flowline>
+											</command>
+											<command class_type='loop' title='Loop' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' type='1' exp='dc_motor = 0 OR switch_data = 8' start='0' >
+												<flowline >
+													<command class_type='delay' title='Delay' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='1' type='2' />
+													<command class_type='calculation' title='Calculation' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' >
+														<exp exp='dc_motor = dc_motor - 1' />
+													</command>
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Cursor' >
+														<argument exp='0' />
+														<argument exp='2' />
+													</command>
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintNumber' >
+														<argument exp='dc_motor' />
+													</command>
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+														<argument exp='&quot; &quot;' />
+													</command>
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Switch_BL0145' macro='ReadAll' >
+														<return exp='switch_data' />
+													</command>
+												</flowline>
+											</command>
+											<command class_type='decision' title='Decision' cmdcolor='4767473' cmdcolor_sec='11337727' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='switch_data = 8' swap='1' >
+												<flowline >
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Clear' />
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+														<argument exp='&quot;water heater and dc motor turns off&quot;' />
+													</command>
+													<command class_type='delay' title='Delay' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='2' type='2' />
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Clear' />
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+														<argument exp='&quot;coffee ready&quot;' />
+													</command>
+													<command class_type='delay' title='Delay' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='2' type='2' />
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Clear' />
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+														<argument exp='&quot;delightful&quot;' />
+													</command>
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Buzzer1' macro='BuzzerBeep' >
+														<argument exp='100' />
+														<argument exp='100' />
+														<argument exp='2' />
+													</command>
+													<command class_type='delay' title='Delay' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='2' type='2' />
+												</flowline>
+												<flowline >
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Clear' />
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='PrintString' >
+														<argument exp='&quot;emergency stop&quot;' />
+													</command>
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='Buzzer1' macro='BuzzerBeep' >
+														<argument exp='100' />
+														<argument exp='100' />
+														<argument exp='10' />
+													</command>
+													<command class_type='delay' title='Delay' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='10' type='2' />
+													<command class_type='call' title='Component Macro' cmdcolor='4487093' cmdcolor_sec='11066367' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' component='LCD_BL0169' macro='Clear' />
+												</flowline>
+											</command>
+										</flowline>
+									</case>
+								</command>
+								<command class_type='delay' title='Delay' cmdcolor='4206456' cmdcolor_sec='10785756' cmdcolor_txt='16777215' cmdgradient='4' cmdopacity='0.64' exp='5' type='2' />
+							</flowline>
+						</command>
+					</flowline>
+				</macro>
+			</macros>
+			<component class_type='ref' guid='4475d8e8-4f60-48be-8a27-e91d85fbabae' vmin='0' vmaj='2' codename='Grove_Humidity_SHT31' panelId='0' x='118' y='-125.5' z='0' xsz='25.1153' ysz='24.9668' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='1' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='Addr' data='068' />
+					<value target='cal_i2c1::CHANNEL' data='000' />
+					<value target='cal_i2c1::SDA' data='$PORTC.4' />
+					<value target='cal_i2c1::SCL' data='$PORTC.5' />
+					<value target='cal_i2c1::SDAPins' data='017' />
+					<value target='cal_i2c1::SCLPins' data='017' />
+					<value target='cal_i2c1::BAUD_LIST' data='002' />
+					<value target='cal_i2c1::BAUD' data='400000' />
+					<value target='cal_i2c1::StopDel' data='0' />
+					<value target='SimComms' data='0' />
+					<value target='cal_i2c1::ScopeTraces' data='1' />
+					<value target='cal_i2c1::ConsoleData' data='1' />
+					<value target='cal_i2c1::Injector' data='000' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='ee697d50-7fb5-4074-8cd6-996e5c386722' vmin='0' vmaj='1' codename='LCD_BL0169' panelId='0' x='423.335' y='-50.0472' z='1' xsz='24.9838' ysz='25.1812' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='LCD1::Pin_Data_0' data='$PORTD.0' />
+					<value target='LCD1::Pin_Data_1' data='$PORTD.1' />
+					<value target='LCD1::Pin_Data_2' data='$PORTD.2' />
+					<value target='LCD1::Pin_Data_3' data='$PORTD.3' />
+					<value target='LCD1::Pin_RS' data='$PORTD.4' />
+					<value target='LCD1::Pin_E' data='$PORTD.5' />
+					<value target='LCD1::ctrl_lcd::Base_GLCD1::ComponentLabel' data='001' />
+					<value target='LCD1::ctrl_lcd::Base_GLCD1::GdiText1::sText' data='LCD_BL0169' />
+					<value target='LCD1::ctrl_lcd::Base_GLCD1::GdiText1::dScale' data='1.000000' />
+					<value target='LCD1::ctrl_lcd::TextColour' data='0' />
+					<value target='LCD1::ctrl_lcd::TextBg' data='14803425' />
+					<value target='LCD1::ctrl_lcd::DisplayBg' data='16777215' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='b3a7287a-4070-49d1-9122-bf6169f67cd1' vmin='0' vmaj='1' codename='Switch_BL0145' panelId='0' x='381.625' y='-260.979' z='2' xsz='24.947' ysz='25.2724' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='count' data='8' />
+					<value target='port' data='000' />
+					<value target='PortByte' data='$PORTB' />
+					<value target='pin0' data='$PORTB.0' />
+					<value target='pin1' data='$PORTB.1' />
+					<value target='pin2' data='$PORTB.2' />
+					<value target='pin3' data='$PORTB.3' />
+					<value target='pin4' data='$PORTB.4' />
+					<value target='pin5' data='$PORTB.5' />
+					<value target='pin6' data='$PORTB.6' />
+					<value target='pin7' data='$PORTB.7' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='04bbd3b8-ee11-40eb-91e8-1bbbd6f65b8c' vmin='0' vmaj='1' codename='Buzzer1' panelId='0' x='97' y='-326' z='3' xsz='25.1767' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='pin' data='$PORTC.2' />
+					<value target='Polarity' data='001' />
+					<value target='BuzzFreq' data='1200' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+		</component>
+	</components>
+	<scadaresourcelookup />
+	<keymap />
+	<panel2d shadows='0' lighting='2' brightness='0' >
+		<background rgb='7292207' img='' style='0' />
+		<camera xe='0' ye='0' ze='1044.1' xt='0' yt='0' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<viewport dx='232' dy='647' zoom='26.8864' fix_topleft='0' />
+		<page x='1000' y='1000' show='0' rgb='7360576' />
+		<winpos ID='7005' RectRecentFloat='523,287,1173,737' RectRecentDocked='0,0,232,676' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='0' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='0' />
+	</panel2d>
+	<panel3d shadows='0' lighting='2' brightness='0' perspective='1' >
+		<background rgb='8409120' img='' style='0' />
+		<table rgb='7360576' img='' style='0' size='0' />
+		<camera xe='-273.213' ye='1056.09' ze='17.2435' xt='-273.213' yt='1056.09' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<camerakey0 xe='0' ye='0' ze='300' xt='0' yt='0' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<camerakey1 xe='-3.67394e-14' ye='0' ze='-300' xt='0' yt='0' zt='0' xquat='0' yquat='1' zquat='0' wquat='6.12323e-17' />
+		<camerakey2 xe='0' ye='-300' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.707107' yquat='0' zquat='0' wquat='0.707107' />
+		<camerakey3 xe='-3.67394e-14' ye='300' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-4.32978e-17' yquat='0.707107' zquat='0.707107' wquat='4.32978e-17' />
+		<camerakey4 xe='-300' ye='-6.66134e-14' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.5' yquat='0.5' zquat='0.5' wquat='0.5' />
+		<camerakey5 xe='300' ye='-6.66134e-14' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.5' yquat='-0.5' zquat='-0.5' wquat='0.5' />
+		<camerakey6 xe='-173.205' ye='-173.205' ze='173.205' xt='0' yt='0' zt='0' xquat='-0.424708' yquat='0.17592' zquat='0.339851' wquat='0.820473' />
+		<winpos ID='7004' RectRecentFloat='555,303,1205,753' RectRecentDocked='0,0,642,413' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='0' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='0' />
+	</panel3d>
+	<panels2d count='1' >
+		<panel2d_0 id='0' name='2D Panel' >
+			<winpos ID='1171' RectRecentFloat='1182,-15,1836,498' RectRecentDocked='1278,183,1920,1195' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='1' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='1' />
+			<background fill='288230376151053813' showgrid='1' gridstyle='1' gridsize='10' gridbrush='71776119075691740' snaptogrid='1' />
+		</panel2d_0>
+	</panels2d>
+	<layout >
+		<view type='0' name='Main' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAeAAAAUwYAAO8DAAA' zoom='65' scrollx='481' scrolly='2197' flags='0' />
+	</layout>
+</document>
+</root>
