@@ -27,7 +27,7 @@ The water heater and DC motor are represented by messages and a countdown on the
 6. After each drink or emergency stop, the program returns to the main menu.
 
 ## Demo on Arduino hardware
-PASTE YOUR VIDEO LINK HERE
+[Watch the demo](demo_arduino.mp4)
 
 ## Simulation (Flowcode)
 Screenshots from the Flowcode simulator, showing the LCD, temperature sensor, switch board and buzzer.
